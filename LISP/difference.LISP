@@ -1,0 +1,10 @@
+(defun difference (i1 i2) (difference1 i1 i2 nil))
+(defun difference1(i1 i2 i3)
+	(if(null i1)
+		i3
+	   (if(member(car i1) i2)
+		   (difference1(cdr i1) i2 i3)
+		(difference1(cdr i1) i2 (cons(car i1) i3))
+		   )
+		)
+	   )
