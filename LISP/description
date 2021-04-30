@@ -1,0 +1,12 @@
+1. deleteall 함수를 정의하라
+deleteall 함수는 두 인자 sex와 lis를 받아서, 리스트 lis 안에 있는 모든 sex를 제거하는 함수이다.
+	(deleteall ‘b ‘(a b c b))	 -> (a c)
+	(deleteall ‘b ‘(a b (c b) b))	 -> (a (c))
+	(deleteall ‘(a b) ‘((a b) a b))	 -> (a b)
+
+2. union(합집합), intersectioin(교집합), difference(차집합) 함수를 정의하라.
+	(union ‘(a b c) ‘(a c d))		-> (a b c d)
+	(intersection ‘(a b c) ‘(a c d))	-> (a c)
+	(difference ‘(a b c) ‘(a c d))		-> (b)
+결과 리스트에 나오는 각 원소는 리스트에 한번만 나타나게 하라.
+결과 원소들의 순서는 의미가 없다.
