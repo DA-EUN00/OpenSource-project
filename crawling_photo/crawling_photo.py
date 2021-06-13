@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup as soups
 def search_selenium(search_name, search_path, search_limit) :
     search_url = "https://www.google.com/search?q=" + str(search_name) + "&hl=ko&tbm=isch"
     
-    browser = webdriver.Chrome('C:/Users/충북대학교/Downloads/chromedriver_win32/chromedriver.exe') #webdriver 위치
+    browser = webdriver.Chrome('C:/Users/[이름]/Downloads/chromedriver_win32/chromedriver.exe') #webdriver 위치
     browser.get(search_url)
     
     image_count = len(browser.find_elements_by_tag_name("img"))
@@ -14,7 +14,7 @@ def search_selenium(search_name, search_path, search_limit) :
 
     for i in range( search_limit ) :
         image = browser.find_elements_by_tag_name("img")[i]
-        image.screenshot("C:/crawling_photo/일몰/일몰7" + str(i) + ".jpg") #사진 저장 위치
+        image.screenshot("C:/crawling_photo/" + str(i) + ".jpg") #사진 저장 위치
 
     browser.close()
 
